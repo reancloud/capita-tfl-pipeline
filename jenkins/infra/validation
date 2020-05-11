@@ -1,0 +1,12 @@
+@Library('reanplatform') _
+
+node {
+
+	def options = [
+		name: "joe-demo",
+		tools: ['reandeploy'],
+		provider: ["azure"]
+	]
+
+	appPipelines.infraValidate(options)
+}

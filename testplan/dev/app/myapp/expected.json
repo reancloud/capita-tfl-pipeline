@@ -1,0 +1,91 @@
+{
+  "azurerm_resource_group": {
+    "RD-Demo-rg": {
+      "name": "dev-joe-demo-Demo",
+      "location": "East US",
+      "tags": {
+        "CreatedBy": "REAN Deploy",
+        "Name": "dev-joe-demo-Demo",
+        "Environment": "dev",
+        "Project": "joe-demo"
+      }
+    }
+  },
+  "azurerm_virtual_network": {
+    "LD-vn": {
+      "name": "dev-joe-demo-virtual-network",
+      "location": "East US",
+      "resource_group_name": "dev-joe-demo-Demo",
+      "address_space": [
+        "10.0.0.0/16"
+      ],
+      "tags": {
+        "CreatedBy": "REAN Deploy",
+        "Name": "dev-joe-demo-virtual-network",
+        "Environment": "dev",
+        "Project": "joe-demo"
+      }
+    }
+  },
+  "azurerm_subnet": {
+    "LD-subnet": {
+      "name": "dev-joe-demo-subnet",
+      "resource_group_name": "dev-joe-demo-Demo",
+      "virtual_network_name": "dev-joe-demo-virtual-network",
+      "address_prefix": "10.0.0.0/24"
+    }
+  },
+  "azurerm_network_interface": {
+    "LD-ni": {
+      "name": "dev-joe-demo-network-interface",
+      "location": "East US",
+      "resource_group_name": "dev-joe-demo-Demo",
+      "enable_ip_forwarding": false,
+      "primary": true,
+      "tags": {
+        "CreatedBy": "REAN Deploy",
+        "Name": "dev-joe-demo-network-interface",
+        "Environment": "dev",
+        "Project": "joe-demo"
+      }
+    }
+  },
+  "azurerm_virtual_machine": {
+    "Spring-App-Server": {
+      "name": "dev-joe-demo-app-vm",
+      "resource_group_name": "dev-joe-demo-Demo",
+      "location": "East US",
+      "vm_size": "Standard_DS1_v2",
+      "identity": "SystemAssigned",
+      "os_profile": {
+        "computer_name": "demo-centos",
+        "admin_username": "demouser"
+      },
+      "storage_data_disk": {
+        "name": "disk2",
+        "create_option": "Empty",
+        "disk_size_gb": 1,
+        "caching": "None"
+      },
+      "storage_image_reference": {
+        "publisher": "OpenLogic",
+        "offer": "CentOS",
+        "sku": "7.5",
+        "version": "latest"
+      },
+      "storage_os_disk": {
+        "name": "myosdisk2",
+        "caching": "ReadWrite",
+        "create_option": "FromImage",
+        "disk_size_gb": 30
+      },
+      "tags": {
+        "CreatedBy": "REAN Deploy",
+        "Name": "dev-joe-demo-app-vm",
+        "Environment": "dev",
+        "Project": "joe-demo"
+      }
+    }
+  }
+}
+
