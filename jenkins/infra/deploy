@@ -3,7 +3,7 @@
 node {
 
   def options = [
-		name: "joe-demo",
+		name: "Capita-DevSecOps",
 		tools: ['reandeploy'],
 		provider: ["azure"]
 	]
