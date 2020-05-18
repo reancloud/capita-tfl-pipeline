@@ -39,7 +39,7 @@ set :app_envs, [:myapp]
 
 # Define the HCAP Deploy environment ID for the application sub-project named :myapp
 #  - HCAP DevSecOps will automatically refer to this variable when deploying the sub-project
-set :myapp_reandeploy_id, 871
+set :myapp_reandeploy_id, 882
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
