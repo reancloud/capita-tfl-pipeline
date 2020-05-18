@@ -35,11 +35,11 @@ set :app_deploy_tool, :reandeploy
 #  - HCAP DevSecOps is able to derive many other default settings from a sub-project name.
 #  - When you select Terraform as your deployment tool, the default sub-project directory
 #    will be `terraform/MY-SUBPROJECT-NAME`.
-set :app_envs, [:capita_role_test]
+set :app_envs, [:myapp]
 
 # Define the HCAP Deploy environment ID for the application sub-project named :myapp
 #  - HCAP DevSecOps will automatically refer to this variable when deploying the sub-project
-set :capita_role_test_reandeploy_id, 915
+set :myapp_reandeploy_id, 882
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
