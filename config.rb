@@ -48,7 +48,7 @@ set :myapp_reandeploy_id, 882
 # Opt in to using HCAP Test as the infrastructure validation tool.
 #  - HCAP DevSecOps also supports "per sub-project" validation tool selection,
 #    such as `set :NAME_infra_test_tool, :reantest`.
-set :infra_test_tool, :reantest
+#set :infra_test_tool, :reantest
 
 # NOTE: Because you usually want different infrastructure per environment, the HCAP Test
 # infrastructure test variables are defined in environment specific configuration files:
@@ -61,16 +61,16 @@ set :infra_test_tool, :reantest
 ##############################################################################################
 
 # Specify which server testing tool to use.
-set :server_test_tool, :inspec
+#set :server_test_tool, :inspec
 
 # What servers should be tested by inspec?
 #  - HCAP DevSecOps supports a simple syntax for declaring servers to be tested.
-server :myserver,
-       protocol: "ssh",
-       host: "dev-joe-demo.eastus.cloudapp.azure.com",
-       user: "demouser",
-       keys: "target/ssh-keys/myserver-key.pem",
-       test_profile: "myserver"
+#server :myserver,
+#       protocol: "ssh",
+#       host: "dev-joe-demo.eastus.cloudapp.azure.com",
+#       user: "demouser",
+#       keys: "target/ssh-keys/myserver-key.pem",
+#       test_profile: "myserver"
 #      ^^^
 #      HCAP DevSecOps will automatically run the inspec profile
 #      located in `test/MY-TEST-PROFILE`
