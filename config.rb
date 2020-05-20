@@ -107,13 +107,13 @@ set :myapp_reandeploy_id, 882
 #    based on any logic that you can define using Ruby.
 #  - HCAP DevSecOps allows you to "lazily" declare the values of inspec attributes,
 #    so that they are not calculated until the exact time that they are needed.
-set :myserver_inspec_inputs do
-  {
-    'environment' => fetch(:pipeline_env),
-    'project' => fetch(:application),
-    'prefix' => "#{fetch(:pipeline_env)}-#{fetch(:application)}"
-  }
-end
+#set :myserver_inspec_inputs do
+#{
+#    'environment' => fetch(:pipeline_env),
+#    'project' => fetch(:application),
+#    'prefix' => "#{fetch(:pipeline_env)}-#{fetch(:application)}"
+#  }
+#end
 
 ##############################################################################################
 # APPLICATION TESTING
@@ -125,35 +125,35 @@ end
 #  - HCAP DevSecOps supports a simple syntax for declaring websites to be tested by HCAP Test.
 #  - HCAP DevSecOps will default to running all declared functional tests and load tests against
 #    all declared websites, unless you specifically declare which tests to run against which websites.
-website :mysite, protocol: :http, host: "dev-joe-demo.eastus.cloudapp.azure.com", path: "/SpringBootCRUDApp", port: 9191
+#website :mysite, protocol: :http, host: "dev-joe-demo.eastus.cloudapp.azure.com", path: "/SpringBootCRUDApp", port: 9191
 
 # A list of HCAP Test functional tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
 #    unless you specifically provide an alternative value.
 #  - HCAP DevSecOps automatically loads Git credentials from the GIT_USER and GIT_PASS environment
 #    variables, unless you specifically provide alternative values.
-set :functional_tests, [
-  {
-    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
-    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
-    chrome: 71,
-    firefox: 63
-  }
-]
+#set :functional_tests, [
+#  {
+#    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
+#    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
+#    chrome: 71,
+#    firefox: 63
+#  }
+#]
 
 # A list of HCAP Test load tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
 #    unless you specifically provide an alternative value.
 #  - HCAP DevSecOps automatically loads Git credentials from the GIT_USER and GIT_PASS environment
 #    variables, unless you specifically provide alternative values.
-set :load_tests, [
-  {
-    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
-    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
-    chrome: 71,
-    firefox: 63
-  }
-]
+#set :load_tests, [
+#  {
+#    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
+#    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
+#    chrome: 71,
+#    firefox: 63
+#  }
+#]
 
 ##############################################################################################
 # SMOKE TESTING
@@ -162,7 +162,7 @@ set :load_tests, [
 # Specify an URL testing tool.
 #  - HCAP DevSecOps also supports "per website" URL test tool selection,
 #    such as `set :NAME_infra_test_tool, :reantest`.
-set :url_test_tool, :inspec
+#set :url_test_tool, :inspec
 
 # A list of URL tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
@@ -171,6 +171,6 @@ set :url_test_tool, :inspec
 #    in your configuration.  Optionally, you can specify exactly which sites a test should run against
 #    by specifying a sites: option, with an array of site names.
 #
-set :url_tests, [
-  { url: "/SpringBootCRUDApp" },
-]
+#set :url_tests, [
+#  { url: "/SpringBootCRUDApp" },
+#]
