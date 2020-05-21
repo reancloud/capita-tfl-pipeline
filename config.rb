@@ -4,7 +4,7 @@
 
 # A machine-readable name for your project.
 #  - HCAP DevSecOps is able to derive other default settings from your project's name.
-set :application, "capita"
+set :application, "capitatfl"
 
 # The project's application type
 #  - HCAP DevSecOps will be changing type :bootstrap to another name in a future release.
