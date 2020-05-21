@@ -76,4 +76,3 @@ end
 #
 #  - By default, HCAP DevSecOps will use a job name of "dev-[PROJECTNAME]-[LAYERNAME]"
 # set :myapp_infratest_name, 'dev-joe-demo-myapp'
-
