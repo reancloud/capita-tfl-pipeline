@@ -3,7 +3,7 @@
 node {
 
   def options = [
-		name: "Capita-DevSecOps",
+		name: "capitatfl",
 		tools: ['reandeploy'],
 		provider: ["none"]
 	]
