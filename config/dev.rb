@@ -11,7 +11,7 @@
 #
 #  - HCAP DevSecOps allows you to dynamically define the values of input variables,
 #    based on any logic that you can define using Ruby.
-set :myapp_vars do
+set :capitacommon_vars do
 #   ^^
 #   By using a "do" "end" block, HCAP DevSecOps allows you to "lazily" declare the values of
 #   input variables, so that they are not calculated until the exact time that they are needed.
@@ -50,7 +50,7 @@ set :capitaapi_vars do
 end
 
 # Declare the HCAP Deploy deployment name for the application sub-project named :myapp
-set :myapp_dep_name, 'development'
+set :capitacommon_dep_name, 'development'
 set :capitaapi_dep_name, 'development'
 
 # Declare HCAP Deploy deployment configuration for the application sub-project named :myapp
@@ -59,7 +59,7 @@ set :capitaapi_dep_name, 'development'
 #    based on any logic that you can define using Ruby.
 #  - HCAP DevSecOps allows you to "lazily" declare the values of deployment configuration,
 #    so that they are not calculated until the exact time that they are needed.
-set :myapp_deploy_config do
+set :capitacommon_deploy_config do
   {
     deployment_name: fetch(:myapp_dep_name),
     deployment_description: 'myapp - Development'
