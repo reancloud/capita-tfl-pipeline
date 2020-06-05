@@ -37,7 +37,8 @@ set :app_deploy_tool, :reandeploy
 #    will be `terraform/MY-SUBPROJECT-NAME`.
 set :app_envs, [
                 :capitacommon,
-                :capitaapi
+                :capitaapi,
+                :capitapurge
 
               ]
 
@@ -45,6 +46,7 @@ set :app_envs, [
 #  - HCAP DevSecOps will automatically refer to this variable when deploying the sub-project
 set :capitacommon_reandeploy_id, 871
 set :capitaapi_reandeploy_id, 872
+set :capitapurge_reandeploy_id, 918
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION

@@ -58,7 +58,7 @@ set :capitaapi_dep_name, 'production'
 #    so that they are not calculated until the exact time that they are needed.
 set :capitacommon_vars_deploy_config do
   {
-    deployment_name: fetch(:myapp_dep_name),
+    deployment_name: fetch(:capitacommon_dep_name),
     deployment_description: 'myapp - Production'
   }
 end
@@ -66,7 +66,7 @@ end
 set :capitaapi_deploy_config do
   {
     deployment_name: fetch(:capitaapi_dep_name),
-    deployment_description: 'capitaapi - productiont'
+    deployment_description: 'capitaapi - Production'
   }
 end
 
