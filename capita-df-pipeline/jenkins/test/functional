@@ -1,0 +1,12 @@
+@Library('reanplatform') _
+
+node {	
+
+	def options = [
+		name: "joe-demo",
+		tools: ['reandeploy'],
+		provider: ['aws']
+	]
+
+	appPipelines.testFunctional(options)
+}

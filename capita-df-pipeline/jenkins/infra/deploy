@@ -1,0 +1,12 @@
+@Library('reanplatform') _
+
+node {
+
+  def options = [
+		name: "capitatfl",
+		tools: ['reandeploy'],
+		provider: ["none"]
+	]
+
+	appPipelines.infraDeploy(options)
+}

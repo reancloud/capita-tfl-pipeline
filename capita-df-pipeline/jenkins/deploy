@@ -1,0 +1,12 @@
+@Library('reanplatform') _
+
+node {
+
+  def options = [
+    name: "Capita-DevSecOps",
+    tools: ['reandeploy'],
+    provider: ["none"]
+  ]
+
+	appPipelines.appDeploy(options)
+}

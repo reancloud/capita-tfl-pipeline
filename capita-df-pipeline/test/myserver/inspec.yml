@@ -1,0 +1,11 @@
+name: <= server_name %>
+title: URL tests for myserver
+version: 0.1.1
+supports:
+  - os-family: redhat
+  - os-family: centos
+depends:
+  - name: demo-app
+    url: <%= "#{ENV.fetch('ARTIFACTORY_INSPEC_URL', 'https://artifactory.prod.platform.reancloud.com/artifactory/local-release-inspec-rean')}/demo-app/0.0.1/demo-app-0.0.1.tar.gz" %>
+    username: "<%= ENV['ARTIFACTORY_USERNAME'] %>"
+    password: "<%= ENV['ARTIFACTORY_API_KEY'] %>"
