@@ -46,7 +46,7 @@ set :app_envs, [
 
 # Define the HCAP Deploy environment ID for the application sub-project named :myapp
 #  - HCAP DevSecOps will automatically refer to this variable when deploying the sub-project
-set :capitaad, 880
+set :capitaad_reandeploy_id, 880
 set :capitacommon_reandeploy_id, 923
 set :capitaapi_reandeploy_id, 924
 set :capitapurge_reandeploy_id, 918
