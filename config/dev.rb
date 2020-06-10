@@ -86,11 +86,31 @@ set :capitadf_vars do
     #                such as:  how many days before my deployed infrastructure expires?
   }
 end
+
+set :capitaad_vars do
+#   ^^
+#   By using a "do" "end" block, HCAP DevSecOps allows you to "lazily" declare the values of
+#   input variables, so that they are not calculated until the exact time that they are needed.
+  {
+    # myvar: env!('MYVAR'),
+    #                 ^^^
+    #                 HCAP DevSecOps allows you to explicitly throw an error when a required
+    #                 environment variable does not exist.
+    environment: fetch(:pipeline_env),
+    project: fetch(:application),
+    prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
+    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d')
+    #                ^^^
+    #                You can write expressions in ruby to dynamically calculate layer inputs,
+    #                such as:  how many days before my deployed infrastructure expires?
+  }
+end
 # Declare the HCAP Deploy deployment name for the application sub-project named :myapp
 set :capitacommon_dep_name, 'development'
 set :capitaapi_dep_name, 'development'
 set :capitapurge_dep_name, 'development'
 set :capitadf_dep_name, 'development'
+set :capitaad_dep_name, 'development'
 
 # Declare HCAP Deploy deployment configuration for the application sub-project named :myapp
 #
@@ -123,6 +143,13 @@ set :capitadf_deploy_config do
   {
     deployment_name: fetch(:capitapurge_dep_name),
     deployment_description: 'capitadf - Development'
+  }
+end
+
+set :capitaad_deploy_config do
+  {
+    deployment_name: fetch(:capitaad_dep_name),
+    deployment_description: 'capitaad - Development'
   }
 end
 
