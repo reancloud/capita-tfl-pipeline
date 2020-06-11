@@ -50,7 +50,7 @@ set :capitaad_reandeploy_id, 880
 set :capitacommon_reandeploy_id, 923
 set :capitaapi_reandeploy_id, 924
 set :capitapurge_reandeploy_id, 918
-set :capitadf_reandeploy_id, 922
+
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
 ##############################################################################################
