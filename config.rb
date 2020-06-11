@@ -39,8 +39,8 @@ set :app_envs, [
                 :capitaad,
                 :capitacommon,
                 :capitaapi,
-                :capitapurge,
-                :capitadf
+                :capitapurge
+
 
               ]
 
