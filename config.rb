@@ -136,6 +136,7 @@ set :infra_test_tool, :none
 #  - HCAP DevSecOps will default to running all declared functional tests and load tests against
 #    all declared websites, unless you specifically declare which tests to run against which websites.
 #website :mysite, protocol: :http, host: "dev-joe-demo.eastus.cloudapp.azure.com", path: "/SpringBootCRUDApp", port: 9191
+website :mysite, protocol: :http
 
 # A list of HCAP Test functional tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
