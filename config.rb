@@ -165,6 +165,14 @@ set :functional_tests, [
 #    firefox: 63
 #  }
 #]
+set :load_tests, [
+  {
+    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
+    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
+    chrome: "71",
+    firefox: "63"
+  }
+]
 
 ##############################################################################################
 # SMOKE TESTING
