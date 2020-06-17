@@ -5,7 +5,7 @@ node {
 	def options = [
 		name: "joe-demo",
 		tools: ['reandeploy'],
-		provider: ['aws']
+		provider: ['azure']
 	]
 
 	appPipelines.testLoad(options)

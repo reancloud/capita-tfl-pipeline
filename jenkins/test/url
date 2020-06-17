@@ -1,12 +1,12 @@
 @Library('reanplatform') _
 
-node {	
+node {
 
 	def options = [
 		name: "joe-demo",
 		tools: ['reandeploy'],
-		provider: ['aws']
+		provider: ['azure']
 	]
-	
+
 	appPipelines.testUrl(options)
 }

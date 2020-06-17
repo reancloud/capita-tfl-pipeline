@@ -1,91 +1,18 @@
 {
-  "azurerm_resource_group": {
-    "RD-Demo-rg": {
-      "name": "dev-joe-demo-Demo",
-      "location": "East US",
-      "tags": {
-        "CreatedBy": "REAN Deploy",
-        "Name": "dev-joe-demo-Demo",
-        "Environment": "dev",
-        "Project": "joe-demo"
-      }
-    }
+  "azuread_application_password": {
+    "application_password_portalapp": "9cb5b124-0599-44de-8255-cea1c3111ebc/e5b18d60-1dfc-b8cf-e1d2-15afc692cd6a",
+    "application_password_adapp": "427ce7c5-fafa-46dd-803a-c55ceb262f1e/a67489b2-1f9d-dd45-1a7e-4caf0a22dc3c"
   },
-  "azurerm_virtual_network": {
-    "LD-vn": {
-      "name": "dev-joe-demo-virtual-network",
-      "location": "East US",
-      "resource_group_name": "dev-joe-demo-Demo",
-      "address_space": [
-        "10.0.0.0/16"
-      ],
-      "tags": {
-        "CreatedBy": "REAN Deploy",
-        "Name": "dev-joe-demo-virtual-network",
-        "Environment": "dev",
-        "Project": "joe-demo"
-      }
-    }
+  "azuread_service_principal": {
+    "capita_service_principal_portalapp": "512e8ff2-a119-436b-bfb9-2f631295dcb5",
+    "capita_service_principal": "3131e142-091f-4a73-9b5e-299487f51cd2"
   },
-  "azurerm_subnet": {
-    "LD-subnet": {
-      "name": "dev-joe-demo-subnet",
-      "resource_group_name": "dev-joe-demo-Demo",
-      "virtual_network_name": "dev-joe-demo-virtual-network",
-      "address_prefix": "10.0.0.0/24"
-    }
+  "azuread_group": {
+    "capita_portladmin_group": "206b70dd-40e7-42b0-984e-21c3b30da451",
+    "capita_portal_readers_group": "3f5b33c0-7366-4a4c-a2f8-475f478e83ed"
   },
-  "azurerm_network_interface": {
-    "LD-ni": {
-      "name": "dev-joe-demo-network-interface",
-      "location": "East US",
-      "resource_group_name": "dev-joe-demo-Demo",
-      "enable_ip_forwarding": false,
-      "primary": true,
-      "tags": {
-        "CreatedBy": "REAN Deploy",
-        "Name": "dev-joe-demo-network-interface",
-        "Environment": "dev",
-        "Project": "joe-demo"
-      }
-    }
-  },
-  "azurerm_virtual_machine": {
-    "Spring-App-Server": {
-      "name": "dev-joe-demo-app-vm",
-      "resource_group_name": "dev-joe-demo-Demo",
-      "location": "East US",
-      "vm_size": "Standard_DS1_v2",
-      "identity": "SystemAssigned",
-      "os_profile": {
-        "computer_name": "demo-centos",
-        "admin_username": "demouser"
-      },
-      "storage_data_disk": {
-        "name": "disk2",
-        "create_option": "Empty",
-        "disk_size_gb": 1,
-        "caching": "None"
-      },
-      "storage_image_reference": {
-        "publisher": "OpenLogic",
-        "offer": "CentOS",
-        "sku": "7.5",
-        "version": "latest"
-      },
-      "storage_os_disk": {
-        "name": "myosdisk2",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "disk_size_gb": 30
-      },
-      "tags": {
-        "CreatedBy": "REAN Deploy",
-        "Name": "dev-joe-demo-app-vm",
-        "Environment": "dev",
-        "Project": "joe-demo"
-      }
-    }
+  "azuread_application": {
+    "capita_azuread_application_portalservice": "9cb5b124-0599-44de-8255-cea1c3111ebc",
+    "capita_azuread_application_azureadapp": "427ce7c5-fafa-46dd-803a-c55ceb262f1e"
   }
 }
-
