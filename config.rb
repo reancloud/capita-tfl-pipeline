@@ -157,14 +157,14 @@ set :functional_tests, [
 #    unless you specifically provide an alternative value.
 #  - HCAP DevSecOps automatically loads Git credentials from the GIT_USER and GIT_PASS environment
 #    variables, unless you specifically provide alternative values.
-#set :load_tests, [
+set :load_tests, [
 #  {
 #    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
 #    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
 #    chrome: 71,
 #    firefox: 63
 #  }
-#]
+  ]
 
 ##############################################################################################
 # SMOKE TESTING
