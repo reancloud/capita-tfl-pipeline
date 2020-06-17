@@ -135,7 +135,7 @@ set :infra_test_tool, :reantest
 #  - HCAP DevSecOps supports a simple syntax for declaring websites to be tested by HCAP Test.
 #  - HCAP DevSecOps will default to running all declared functional tests and load tests against
 #    all declared websites, unless you specifically declare which tests to run against which websites.
-website :mysite, protocol: :http, host: "dev-joe-demo.eastus.cloudapp.azure.com", path: "/SpringBootCRUDApp", port: 9191
+website :capitaapp, protocol: :http, host: "", path: ""
 
 
 # A list of HCAP Test functional tests to be run, with a minimal number of options required.
@@ -145,8 +145,8 @@ website :mysite, protocol: :http, host: "dev-joe-demo.eastus.cloudapp.azure.com"
 #    variables, unless you specifically provide alternative values.
 set :functional_tests, [
   {
-    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
-    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
+    command_to_run_test: "mvn test -Dtest=\"APIRunner\" -Denv=\"dev\" -Dtoken=\"hcp N2FiZmM0MGQtMzZjMC00Y2YwLTg3NjQtMGVmOGNjODQyODA1:d183QmYlMjRrV3IlN2J0dDEpNVlqJTIzOFB6dVIlMjNUXy1fJTIzVG1T\" -Dcontainer=\"evidential\" -Dmethod=\"header\"",
+    git_repository_url: "https://github.com/reancloud/capita-automation-Framework",
     chrome: 71,
     firefox: 63
   }
@@ -165,14 +165,6 @@ set :functional_tests, [
 #    firefox: 63
 #  }
 #]
-set :load_tests, [
-  {
-    command_to_run_test: "mvn test -Dcucumber.options=\"--tags @app_test\"",
-    git_repository_url: "https://github.com/reancloud/selenium-spring-application",
-    chrome: "71",
-    firefox: "63"
-  }
-]
 
 ##############################################################################################
 # SMOKE TESTING

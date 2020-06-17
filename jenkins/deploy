@@ -5,7 +5,7 @@ node {
   def options = [
     name: "Capita-DevSecOps",
     tools: ['reandeploy'],
-    provider: ["none"]
+    provider: ["azure"]
   ]
 
 	appPipelines.appDeploy(options)
