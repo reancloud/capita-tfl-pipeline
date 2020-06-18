@@ -135,7 +135,7 @@ set :infra_test_tool, :none
 #  - HCAP DevSecOps supports a simple syntax for declaring websites to be tested by HCAP Test.
 #  - HCAP DevSecOps will default to running all declared functional tests and load tests against
 #    all declared websites, unless you specifically declare which tests to run against which websites.
-website :capitaapp, protocol: :http, host: "", path: ""
+website :capitaapp, protocol: :http, host: "youdomain.com"
 
 
 # A list of HCAP Test functional tests to be run, with a minimal number of options required.
