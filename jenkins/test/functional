@@ -3,9 +3,9 @@
 node {
 
 	def options = [
-		name: "joe-demo",
+		name: "capita-url-test",
 		tools: ['reandeploy'],
-		provider: ['azure']
+		provider: ['none']
 	]
 
 	appPipelines.testFunctional(options)
