@@ -127,6 +127,13 @@ set :capitaad_deploy_config do
   }
 end
 
+set :functional_tests, [
+  {
+    command_to_run_test: "mvn test -Dtest=\"APIRunner\" -Denv=\"dev\" -Dtoken=\"hcp N2FiZmM0MGQtMzZjMC00Y2YwLTg3NjQtMGVmOGNjODQyODA1:d183QmYlMjRrV3IlN2J0dDEpNVlqJTIzOFB6dVIlMjNUXy1fJTIzVG1T\" -Dcontainer=\"evidential\" -Dmethod=\"header\"",
+    git_repository_url: "https://github.com/reancloud/capita-automation-Framework",
+    chrome: 72
+  }
+]
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
