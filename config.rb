@@ -58,7 +58,7 @@ set :capitapurge_reandeploy_id, 918
 # Opt in to using HCAP Test as the infrastructure validation tool.
 #  - HCAP DevSecOps also supports "per sub-project" validation tool selection,
 #    such as `set :NAME_infra_test_tool, :reantest`.
-set :infra_test_tool, :reantest
+set :infra_test_tool, :none
 
 # NOTE: Because you usually want different infrastructure per environment, the HCAP Test
 # infrastructure test variables are defined in environment specific configuration files:
@@ -136,7 +136,7 @@ set :infra_test_tool, :reantest
 #  - HCAP DevSecOps will default to running all declared functional tests and load tests against
 #    all declared websites, unless you specifically declare which tests to run against which websites.
 website :capitaapp, protocol: :http, host: "youdomain.com"
-
+set :url_tests, []
 
 # A list of HCAP Test functional tests to be run, with a minimal number of options required.
 #  - HCAP DevSecOps automatically applies default test execution options to each test in the list below,
