@@ -134,6 +134,8 @@ set :functional_tests, [
     git_branch: "CAPHCP-188-create_framework",
     pre_script: "cd capita-API_UI_tests",
     post_script: "mv target/surefire-reports/* target/cucumber-html-reports",
+    report_file_name: "TESTAPI-tests.APIRunner.xml" ,
+    output_directory_path: "capita-API_UI_tests/target/cucumber-html-reports" 
     chrome: 72
   }
 ]
