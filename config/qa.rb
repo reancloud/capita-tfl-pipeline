@@ -87,8 +87,8 @@ set :capitaad_vars do
   }
 end
 # Declare the HCAP Deploy deployment name for the application sub-project named :myapp
-set :capitacommon_dep_name, 'qa11'
-set :capitaapi_dep_name, 'qa11'
+set :capitacommon_dep_name, 'qa1'
+set :capitaapi_dep_name, 'qa1'
 set :capitapurge_dep_name, 'qa1'
 set :capitaad_dep_name, 'qa1'
 
