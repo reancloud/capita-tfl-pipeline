@@ -135,7 +135,7 @@ set :functional_tests, [
     pre_script: "cd capita-API_UI_tests",
     post_script: "mv target/surefire-reports/* target/cucumber-html-reports",
     report_file_name: "TESTAPI-tests.APIRunner.xml" ,
-    output_directory_path: "capita-API_UI_tests/target/cucumber-html-reports" 
+    output_directory_path: "capita-API_UI_tests/target/cucumber-html-reports" ,
     chrome: 72
   }
 ]
