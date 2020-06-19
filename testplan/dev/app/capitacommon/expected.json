@@ -1,36 +1,55 @@
 {
-    "api_service_principal_id": "034c86e3-3b00-45ad-9cb0-0087264cd8db",
-    "appinsight_id": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/microsoft.insights/components/dev_capitatfl_application_insights",
-    "appinsight_instrumentation_key": "2217a2a6-338e-4ac7-a960-167706d9c1d6",
-    "config_cosmosdbid": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb",
-    "config_cosmosendpoint": "https://dev-capitatfl-configstorecosmosdb.documents.azure.com:443/",
-    "config_cosmosprimary_master_key": "QrWOg4GbNpfxTrSSnwwG3RuOYvWK37szqiBT72Dg2kmM6FOplGSRriQHotNGlRuYS2Sk52dpe8waRCzIYIOVog==",
-    "cosmosdb_configdatastore": "dev-capitatfl-configstoredb",
-    "cosmosdb_configdatastore_name": "dev-capitatfl-configstoredb",
-    "cosmosdb_db_name": "dev-capitatfl-metadatastore",
-    "cosmosdb_id": "[\"/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-evidentialcosmosdb\"]",
-    "cosmosdb_name": "[\"dev-capitatfl-evidentialcosmosdb\"]",
-    "evi_primary_blob_endpoint": "https://devevidentialst.blob.core.windows.net/",
-    "evi_primary_connection_string": "DefaultEndpointsProtocol=https;AccountName=devevidentialst;AccountKey=841VsGqGVr1UC7JnlE9XOd2NG3G7HmaGTFrAGcrxlyipXDm9bpfilXcF1LKF5uedFNPHFschtW9mWGOfVv+elg==;EndpointSuffix=core.windows.net",
-    "evi_primary_queue_endpoint": "https://devevidentialst.queue.core.windows.net/",
-    "evidentialcosmosdb_accname": "dev-capitatfl-evidentialcosmosdb",
-    "evidentialcosmosdb_dbname": "dev-capitatfl-metadatastore",
-    "evidentialcosmosdb_endpoint": "https://dev-capitatfl-evidentialcosmosdb.documents.azure.com:443/",
-    "key_vault_name": "dev-capitatfl-vault",
-    "mastercosmosdb_endpoint": "[\"https://dev-capitatfl-configstorecosmosdb.documents.azure.com:443/\"]",
-    "mastercosmosdb_id": "[\"/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb\"]",
-    "mastercosmosdb_key": "QrWOg4GbNpfxTrSSnwwG3RuOYvWK37szqiBT72Dg2kmM6FOplGSRriQHotNGlRuYS2Sk52dpe8waRCzIYIOVog==",
-    "mastercosmosdb_name": "[\"dev-capitatfl-configstorecosmosdb\"]",
-    "resource_group_id": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup",
-    "resource_group_location": "uksouth",
-    "resource_group_name": "dev-capitatfl-resourcegroup",
-    "role_definition_custom_roleid": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/providers/Microsoft.Authorization/roleDefinitions/69aafba0-0f23-3d1a-f81a-83409e26e5da",
-    "secondary_storageaccount_id": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.Storage/storageAccounts/devevidentiallogsst",
-    "storage_account2_primary_endpoint": "DefaultEndpointsProtocol=https;AccountName=devevidentiallogsst;AccountKey=Exsn7qtFRoLq9dCzkRda2LkgLzjDnsD/ldtdp4c5opjXnZYb2xvJLA0ACpacAbWLxQ0vzlul1max5/bfh72XWA==;EndpointSuffix=core.windows.net",
-    "storage_account_primary_endpoint": "DefaultEndpointsProtocol=https;AccountName=devevidentialst;AccountKey=841VsGqGVr1UC7JnlE9XOd2NG3G7HmaGTFrAGcrxlyipXDm9bpfilXcF1LKF5uedFNPHFschtW9mWGOfVv+elg==;EndpointSuffix=core.windows.net",
-    "storageaccount_id": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.Storage/storageAccounts/devevidentialst",
-    "storageaccount_name": "devevidentialst",
-    "subscription_id": "2a3390b4-6a54-48b5-812a-35320c2fab9c",
-    "target_resource_id": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.KeyVault/vaults/dev-capitatfl-vault",
-    "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc"
+  "azurerm_storage_account": {
+    "capita_storage_account2": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.Storage/storageAccounts/devevidentiallogsst",
+    "capita_storage_account": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.Storage/storageAccounts/devevidentialst"
+  },
+  "data": {
+    "terraform_remote_state-ad_resources_dependson": "2020-06-19 13:34:37.315301897 +0000 UTC",
+    "azurerm_client_config-capita_client_config": "2020-06-19 13:34:54.899810598 +0000 UTC"
+  },
+  "azurerm_application_insights": {
+    "capita_application_insights": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/microsoft.insights/components/dev_capitatfl_application_insights"
+  },
+  "azurerm_role_assignment": {
+    "capita_assign_key_vault_role": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.KeyVault/vaults/dev-capitatfl-vault/providers/Microsoft.Authorization/roleAssignments/01f6cc8f-c164-9678-b0d7-cdc2534507e0",
+    "capita_assignrole": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.Storage/storageAccounts/devevidentialst/providers/Microsoft.Authorization/roleAssignments/b09df04b-3376-c20c-cd9c-031fe9d3c67b",
+    "capita_cosmosdb_role": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-evidentialcosmosdb/providers/Microsoft.Authorization/roleAssignments/a8be016a-1592-5b5a-4e08-29f7abee8dda"
+  },
+  "azurerm_key_vault_secret": {
+    "capita_key_vault_secret": "https://dev-capitatfl-vault.vault.azure.net/secrets/dev-capitatfl-vault-secret/6289e3a99d9047b58daf12da11ad5406"
+  },
+  "azurerm_cosmosdb_sql_database": {
+    "cosmosdb_configdatastore": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb/apis/sql/databases/dev-capitatfl-configstoredb",
+    "cosmosdb_sql_database": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-evidentialcosmosdb/apis/sql/databases/dev-capitatfl-metadatastore"
+  },
+  "azurerm_azuread_application": {
+    "capita-azureadapp": "5745bf5c-2fc5-49fb-b9fb-b9603cc76359"
+  },
+  "azurerm_role_definition": {
+    "capita_account_custom_roledefinition": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/providers/Microsoft.Authorization/roleDefinitions/69aafba0-0f23-3d1a-f81a-83409e26e5da",
+    "capita_admin_roledefinition": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/providers/Microsoft.Authorization/roleDefinitions/78972639-ca9f-e7ab-0d6f-5d9cfaa881c3",
+    "capita_developer_roledefinition": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/providers/Microsoft.Authorization/roleDefinitions/57a6d90e-a2bb-2d5d-57c3-ffbe0f4624e1"
+  },
+  "azurerm_cosmosdb_sql_container": {
+    "cosmosdb_dbcontainers_searchqueries": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb/apis/sql/databases/dev-capitatfl-configstoredb/containers/searchqueries",
+    "cosmosdb-configdbcontainers-filters": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb/apis/sql/databases/dev-capitatfl-configstoredb/containers/searchfilteritems",
+    "cosmosdb_sql_containers": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-evidentialcosmosdb/apis/sql/databases/dev-capitatfl-metadatastore/containers/metadata",
+    "cosmosdb_dbcontainers_contentclasses": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb/apis/sql/databases/dev-capitatfl-configstoredb/containers/contentclasses",
+    "cosmos_dbcontainers": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb/apis/sql/databases/dev-capitatfl-configstoredb/containers/configurations",
+    "cosmosdb_configdbcontainers_dict": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb/apis/sql/databases/dev-capitatfl-configstoredb/containers/dictionary",
+    "cosmosdb_dbcontainers-emailtemplates": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb/apis/sql/databases/dev-capitatfl-configstoredb/containers/contentclassmap"
+  },
+  "azurerm_key_vault": {
+    "capita_key_vault": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.KeyVault/vaults/dev-capitatfl-vault"
+  },
+  "azurerm_azuread_service_principal": {
+    "capita-api-serviceprincipal": "034c86e3-3b00-45ad-9cb0-0087264cd8db"
+  },
+  "azurerm_resource_group": {
+    "capita-resourcegroup": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup"
+  },
+  "azurerm_cosmosdb_account": {
+    "capita_cosmosdb_account_master": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-configstorecosmosdb",
+    "capita_cosmosdb_account": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capitatfl-resourcegroup/providers/Microsoft.DocumentDB/databaseAccounts/dev-capitatfl-evidentialcosmosdb"
+  }
 }
