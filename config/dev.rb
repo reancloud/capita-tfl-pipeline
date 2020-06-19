@@ -132,7 +132,7 @@ set :functional_tests, [
     command_to_run_test: "mvn test -Dtest=\"APIRunner\" -Denv=\"dev\" -Dtoken=\"hcp N2FiZmM0MGQtMzZjMC00Y2YwLTg3NjQtMGVmOGNjODQyODA1:d183QmYlMjRrV3IlN2J0dDEpNVlqJTIzOFB6dVIlMjNUXy1fJTIzVG1T\" -Dcontainer=\"evidential\" -Dmethod=\"header\"",
     git_repository_url: "https://github.com/reancloud/capita-automation-Framework",
     git_branch: "CAPHCP-188-create_framework",
-    pre_script: "cd capita-API_UI_TESTS",
+    pre_script: "cd capita-API_UI_tests",
     post_script: "mv target/surefire-reports/* target/cucumber-html-reports",
     chrome: 72
   }
