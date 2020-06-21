@@ -108,7 +108,7 @@ set :capitaad_vars do
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
     location: "ukwest",
     access_tier: "Standard",
-    password: rand(6**length).to_s(6)
+    password: SecureRandom.alphanumeric(6)
 }
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
