@@ -35,6 +35,8 @@ set :capitacommon_vars do
     "throughput": 400,
     "ip_range_filter": "",
     "configcosmos": {
+
+  },
   "evidential": {
     "name": "configstore",
     "offer_type": "Standard",
@@ -44,7 +46,6 @@ set :capitacommon_vars do
     "consistency_level": "Strong",
     "throughput": 400,
     "ip_range_filter": ""
-  }
   }
   }
 
