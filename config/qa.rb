@@ -32,7 +32,7 @@ set :capitacommon_vars do
     "automatic_failover": true,
     "failover_location": "ukwest",
     "consistency_level": "ConsistentPrefix",
-    "throughput": 400,
+    throughput: 500,
     "ip_range_filter": ""
   }
 },
