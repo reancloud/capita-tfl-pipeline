@@ -23,7 +23,31 @@ set :capitacommon_vars do
     environment: fetch(:pipeline_env),
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
-    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d')
+    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
+    "cosmos": {
+      "evidential": {
+    "name": "docstore",
+    "offer_type": "Standard",
+    "kind": "GlobalDocumentDB",
+    "automatic_failover": true,
+    "failover_location": "ukwest",
+    "consistency_level": "ConsistentPrefix",
+    "throughput": 400,
+    "ip_range_filter": "",
+    "configcosmos": {
+  "evidential": {
+    "name": "configstore",
+    "offer_type": "Standard",
+    "kind": "GlobalDocumentDB",
+    "automatic_failover": true,
+    "failover_location": "ukwest",
+    "consistency_level": "Strong",
+    "throughput": 400,
+    "ip_range_filter": ""
+  }
+  }
+  }
+
 
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
@@ -85,19 +109,7 @@ set :capitaad_vars do
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
     location: "ukwest",
-    access_tier: "Standard",
-    "cosmos": {
-      "evidential": {
-    "name": "docstore",
-    "offer_type": "Standard",
-    "kind": "GlobalDocumentDB",
-    "automatic_failover": true,
-    "failover_location": "ukwest",
-    "consistency_level": "ConsistentPrefix",
-    "throughput": 400,
-    "ip_range_filter": ""
-  }
-
+    access_tier: "Standard"
 }
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
