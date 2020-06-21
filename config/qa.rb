@@ -103,7 +103,8 @@ set :capitaad_dep_name, 'qa1'
 set :capitacommon_deploy_config do
   {
     deployment_name: fetch(:capitacommon_dep_name),
-    deployment_description: 'capitacommon - qa1'
+    deployment_description: 'capitacommon - qa1',
+    input_json_file: fetch(:capitacommon_inputs_file),
   }
 end
 

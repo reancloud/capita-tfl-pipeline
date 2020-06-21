@@ -43,6 +43,24 @@ set :app_envs, [
 
 
               ]
+# Declare HCAP Deploy input parameters for the application sub-project named "myapp"
+#  - HCAP DevSecOps allows you to dynamically define input parameters to be passed to
+#    HCAP Deploy at deployment time.  This example reads them from a file.
+#  - Because HCAP DevSecOps configuration files are expressed in the Ruby language, you have
+#    the freedom to define your own logic for how configuration is set for your build.
+set :capitacommon_inputs_file do
+                if File.readable? target('capitacommon_input_vars.json')
+                  target('capitacommon_input_vars.json')
+                else
+                  'input/capitacommon_input_vars.json'
+                end
+end
+
+              # The HCAP CLI requires a JSON file to be passed with deployment input parameters.
+              # However, you can still easily use those input parameters directly in your pipeline config.
+set :capitacommon_inputs do
+                read_json fetch(:capitacommon_inputs_file)
+end
 
 # Define the HCAP Deploy environment ID for the application sub-project named :myapp
 #  - HCAP DevSecOps will automatically refer to this variable when deploying the sub-project
