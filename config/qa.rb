@@ -42,7 +42,7 @@ set :capitacommon_vars do
      kind: "GlobalDocumentDB",
      automatic_failover: true,
      failover_location: "ukwest",
-     consistency_level": "Strong",
+     consistency_level: "Strong",
      "ip_range_filter": ""
    }
  }
