@@ -97,7 +97,7 @@ set :capitaad_vars do
     "throughput": 400,
     "ip_range_filter": ""
   }
-}
+
 }
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
