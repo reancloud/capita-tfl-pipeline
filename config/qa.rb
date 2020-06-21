@@ -85,7 +85,20 @@ set :capitaad_vars do
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
     location: "ukwest",
-    access_tier: "Standard"
+    access_tier: "Standard",
+    "cosmos": {
+      "evidential": {
+    "name": "docstore",
+    "offer_type": "Standard",
+    "kind": "GlobalDocumentDB",
+    "automatic_failover": true,
+    "failover_location": "ukwest",
+    "consistency_level": "ConsistentPrefix",
+    "throughput": 400,
+    "ip_range_filter": ""
+  }
+}
+}
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
     #                such as:  how many days before my deployed infrastructure expires?
