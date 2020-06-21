@@ -26,25 +26,23 @@ set :capitacommon_vars do
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
     "cosmos": {
   "evidential": {
-    "name": "docstore",
-    "offer_type": "Standard",
-    "kind": "GlobalDocumentDB",
-    "automatic_failover": true,
-    "failover_location": "ukwest",
-    "consistency_level": "ConsistentPrefix",
-    throughput: 500,
+    name: "docstore",
+    offer_type: "Standard",
+    kind: "GlobalDocumentDB",
+    automatic_failover: true,
+    failover_location: "ukwest",
+    consistency_level: "ConsistentPrefix",
     "ip_range_filter": ""
   }
 },
 "configcosmos": {
    "evidential": {
      "name": "configstore",
-     "offer_type": "Standard",
-     "kind": "GlobalDocumentDB",
-     "automatic_failover": true,
-     "failover_location": "ukwest",
-     "consistency_level": "Strong",
-     "throughput": 400,
+     offer_type: "Standard",
+     kind: "GlobalDocumentDB",
+     automatic_failover: true,
+     failover_location: "ukwest",
+     consistency_level": "Strong",
      "ip_range_filter": ""
    }
  }
