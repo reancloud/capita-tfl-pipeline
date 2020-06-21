@@ -50,9 +50,11 @@ set :app_envs, [
 #    the freedom to define your own logic for how configuration is set for your build.
 
 set :capitacommon_inputs_file do
-
+                if File.readable? target('capitacommon_input_vars.json')
+                  target('capitacommon_input_vars.json')
+                else
                   'input/capitacommon_input_vars.json'
-
+                end
 end
 
 
