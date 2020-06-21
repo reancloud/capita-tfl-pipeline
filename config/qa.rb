@@ -11,6 +11,24 @@
 #
 #  - HCAP DevSecOps allows you to dynamically define the values of input variables,
 #    based on any logic that you can define using Ruby.
+set :capitacommon_vars do
+#   ^^
+#   By using a "do" "end" block, HCAP DevSecOps allows you to "lazily" declare the values of
+#   input variables, so that they are not calculated until the exact time that they are needed.
+  {
+    # myvar: env!('MYVAR'),
+    #                 ^^^
+    #                 HCAP DevSecOps allows you to explicitly throw an error when a required
+    #                 environment variable does not exist.
+    environment: fetch(:pipeline_env),
+    project: fetch(:application),
+    prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
+    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d')
+    #                ^^^
+    #                You can write expressions in ruby to dynamically calculate layer inputs,
+    #                such as:  how many days before my deployed infrastructure expires?
+  }
+end
 
 set :capitaapi_vars do
 #   ^^

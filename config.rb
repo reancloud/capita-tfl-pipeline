@@ -48,13 +48,13 @@ set :app_envs, [
 #    HCAP Deploy at deployment time.  This example reads them from a file.
 #  - Because HCAP DevSecOps configuration files are expressed in the Ruby language, you have
 #    the freedom to define your own logic for how configuration is set for your build.
+
 set :capitacommon_inputs_file do
-                if File.readable? target('capitacommon_input_vars.json')
-                  target('capitacommon_input_vars.json')
-                else
+
                   'input/capitacommon_input_vars.json'
-                end
+              
 end
+
 
               # The HCAP CLI requires a JSON file to be passed with deployment input parameters.
               # However, you can still easily use those input parameters directly in your pipeline config.
