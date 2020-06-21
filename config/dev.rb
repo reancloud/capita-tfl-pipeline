@@ -91,10 +91,10 @@ set :capitaad_vars do
   }
 end
 # Declare the HCAP Deploy deployment name for the application sub-project named :myapp
-set :capitacommon_dep_name, 'develop'
-set :capitaapi_dep_name, 'develop'
-set :capitapurge_dep_name, 'develop'
-set :capitaad_dep_name, 'develop'
+set :capitacommon_dep_name, 'development'
+set :capitaapi_dep_name, 'development'
+set :capitapurge_dep_name, 'development'
+set :capitaad_dep_name, 'development'
 
 # Declare HCAP Deploy deployment configuration for the application sub-project named :myapp
 #
@@ -105,21 +105,21 @@ set :capitaad_dep_name, 'develop'
 set :capitacommon_deploy_config do
   {
     deployment_name: fetch(:capitacommon_dep_name),
-    deployment_description: 'capitacommon - Develop'
+    deployment_description: 'capitacommon - Development'
   }
 end
 
 set :capitaapi_deploy_config do
   {
     deployment_name: fetch(:capitaapi_dep_name),
-    deployment_description: 'capitaapi - Develop'
+    deployment_description: 'capitaapi - Development'
   }
 end
 
 set :capitapurge_deploy_config do
   {
     deployment_name: fetch(:capitapurge_dep_name),
-    deployment_description: 'capitapurge - Develop'
+    deployment_description: 'capitapurge - Development'
   }
 end
 
@@ -127,7 +127,7 @@ end
 set :capitaad_deploy_config do
   {
     deployment_name: fetch(:capitaad_dep_name),
-    deployment_description: 'capitaad - Develop'
+    deployment_description: 'capitaad - Development'
   }
 end
 
