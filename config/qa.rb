@@ -114,7 +114,7 @@ set :capitaad_vars do
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
     #                such as:  how many days before my deployed infrastructure expires?
-  }
+
 end
 # Declare the HCAP Deploy deployment name for the application sub-project named :myapp
 set :capitacommon_dep_name, 'qa1'
