@@ -25,7 +25,7 @@ set :capitacommon_vars do
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
     "cosmos": {
-      "evidential": {
+  "evidential": {
     "name": "docstore",
     "offer_type": "Standard",
     "kind": "GlobalDocumentDB",
@@ -33,22 +33,21 @@ set :capitacommon_vars do
     "failover_location": "ukwest",
     "consistency_level": "ConsistentPrefix",
     "throughput": 400,
-    "ip_range_filter": "",
-    "configcosmos": {
-
-  },
-  "evidential": {
-    "name": "configstore",
-    "offer_type": "Standard",
-    "kind": "GlobalDocumentDB",
-    "automatic_failover": true,
-    "failover_location": "ukwest",
-    "consistency_level": "Strong",
-    "throughput": 400,
     "ip_range_filter": ""
   }
-  }
-
+},
+"configcosmos": {
+   "evidential": {
+     "name": "configstore",
+     "offer_type": "Standard",
+     "kind": "GlobalDocumentDB",
+     "automatic_failover": true,
+     "failover_location": "ukwest",
+     "consistency_level": "Strong",
+     "throughput": 400,
+     "ip_range_filter": ""
+   }
+ }
 
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
