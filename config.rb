@@ -52,7 +52,7 @@ set :app_envs, [
 set :capitacommon_inputs_file do
 
                   'input/capitacommon_input_vars.json'
-              
+
 end
 
 
