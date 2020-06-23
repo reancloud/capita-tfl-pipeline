@@ -65,7 +65,25 @@ set :capitaapi_vars do
     environment: fetch(:pipeline_env),
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
-    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d')
+    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
+    "owner": "hcap.azure.service.user",
+    "product": "hcap",
+    "clientName": "capita",
+    "adapp": "evidential",
+    "key": "evidential",
+    "app_environmentid": "",
+    "container_name": "evidential2",
+    "access_tier": "Standard",
+    "replication": "GRS",
+    "tier": "Standard",
+    "size": "S1",
+    "queuename": "evidentialqueue",
+    "cosmoskey": "evidential1",
+    "failover_location": "ukwest",
+    "offertype": "Standard",
+    "consistency_level": "Strong",
+    "integer": "1200",
+    "location": "uksouth"
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
     #                such as:  how many days before my deployed infrastructure expires?
@@ -109,8 +127,8 @@ set :capitaad_vars do
     location: "ukwest",
     access_tier: "Standard",
     password: SecureRandom.alphanumeric(6),
-    evi_password: SecureRandom.alphanumeric(6),
-    portal_password: SecureRandom.alphanumeric(6),
+    evi_password: SecureRandom.alphanumeric(8),
+    portal_password: SecureRandom.alphanumeric(8),
 }
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
@@ -159,7 +177,19 @@ set :capitaad_deploy_config do
   }
 end
 
-set :functional_tests, []
+set :functional_tests, [
+  {
+    command_to_run_test: "mvn test -Dtest=\"APIRunner\" -Denv=\"dev\" -Dtoken=\"hcp N2FiZmM0MGQtMzZjMC00Y2YwLTg3NjQtMGVmOGNjODQyODA1:d183QmYlMjRrV3IlN2J0dDEpNVlqJTIzOFB6dVIlMjNUXy1fJTIzVG1T\" -Dcontainer=\"evidential\" -Dmethod=\"header\"",
+    git_repository_url: "https://github.com/reancloud/capita-automation-Framework",
+    git_branch: "CAPHCP-188-create_framework",
+    pre_script: "cd capita-API_UI_tests",
+    post_script: "mv target/surefire-reports/* target/cucumber-html-reports",
+    report_file_name: "TESTAPI-tests.APIRunner.xml" ,
+    output_directory_path: "capita-API_UI_tests/target/cucumber-html-reports" ,
+    chrome: 72
+  }
+]
+
 set :infra_test_tool, :none
 
 ##############################################################################################
