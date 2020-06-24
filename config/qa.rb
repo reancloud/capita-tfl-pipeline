@@ -127,8 +127,8 @@ set :capitaad_vars do
     location: "ukwest",
     access_tier: "Standard",
     password: SecureRandom.alphanumeric(6),
-    evi_password: SecureRandom.alphanumeric(8),
-    portal_password: SecureRandom.alphanumeric(8),
+    evi_password: "Rs4Zd7",
+    portal_password: "iWMqhD",
 }
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
