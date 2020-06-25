@@ -1,0 +1,412 @@
+{
+    "azurerm_app_service": {
+      "testAzureAppService": {
+        "name": "dev-capita-evidentialapp",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-rg",
+        "app_service_plan_id ": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capita-rg/providers/Microsoft.Web/serverfarms/dev-capita-evidentialplan",
+        "client_affinity_enabled": false,
+        "client_cert_enabled ": false,
+        "enabled": true,
+        "https_only": true,
+        "identity": {
+          "type": "SystemAssigned",
+          "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc",
+          "principal_id": "6c9d4954-e7e6-4df8-a83b-980358d2babb"
+        },
+        "auth_settings": {
+          "enabled": false,
+          "runtime_version": null,
+          "unauthenticated_client_action": null,
+          "token_store_enabled": null,
+          "issuer": null
+        },
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+                                "Environment": "dev",
+                                "ExpirationDate": "2020-06-14T17:02:20Z",
+                                "Name": "dev-capita-evidentialapp",
+                                "Product": "ph2s1",
+                                "Owner": "hcap.azure.service.user",
+                                "Project": "capita"
+        }
+      },
+                 "testAzureAppService1": {
+        "name": "dev-capita-evidentialmetadatafunc",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-rg",
+        "app_service_plan_id ": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capita-rg/providers/Microsoft.Web/serverfarms/dev-capita-evidentialplan",
+        "client_affinity_enabled": false,
+        "client_cert_enabled ": false,
+        "enabled": true,
+        "https_only": true,
+        "identity": {
+          "type": "SystemAssigned",
+          "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc",
+          "principal_id": "58f326c7-e949-482b-b651-d6de11748f3a"
+        },
+        "auth_settings": {
+          "enabled": false,
+          "runtime_version": null,
+          "unauthenticated_client_action": null,
+          "token_store_enabled": null,
+          "issuer": null
+        },
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+                                "Environment": "dev",
+                                "ExpirationDate": "2020-06-14T17:02:20Z",
+                                "Name": "dev-capita-evidentialmetadatafunc",
+                                "Product": "ph2s1",
+                                "Owner": "hcap.azure.service.user",
+                                "Project": "capita"
+        }
+      },
+                 "testAzureAppService2": {
+        "name": "dev-capita-portalapiapp",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-rg",
+        "app_service_plan_id ": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capita-rg/providers/Microsoft.Web/serverfarms/dev-capita-portalplan",
+        "client_affinity_enabled": true,
+        "client_cert_enabled ": false,
+        "enabled": true,
+        "https_only": false,
+        "identity": {
+          "type": "SystemAssigned",
+          "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc",
+          "principal_id": "58d5b5fd-32c5-4f9e-a0ff-ddd3ccddbb02"
+        },
+        "auth_settings": {
+          "enabled": false,
+          "runtime_version": null,
+          "unauthenticated_client_action": null,
+          "token_store_enabled": null,
+          "issuer": null
+        },
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+                                "Environment": "dev",
+                                "ExpirationDate": "2020-06-14T17:02:20Z",
+                                "Name": "dev-capita-portalapiapp",
+                                "Product": "ph2s1",
+                                "Owner": "hcap.azure.service.user",
+                                "Project": "capita"
+        }
+      },
+                 "testAzureAppService3": {
+        "name": "dev-capita-queryportalapp",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-rg",
+        "app_service_plan_id ": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capita-rg/providers/Microsoft.Web/serverfarms/dev-capita-portalplan",
+        "client_affinity_enabled": true,
+        "client_cert_enabled ": false,
+        "enabled": true,
+        "https_only": true,
+        "identity": {
+          "type": "SystemAssigned",
+          "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc",
+          "principal_id": "59c8d63c-9a97-454e-b011-aa9ccb565341"
+        },
+        "auth_settings": {
+          "enabled": false,
+          "runtime_version": null,
+          "unauthenticated_client_action": null,
+          "token_store_enabled": null,
+          "issuer": null
+        },
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+                                "Environment": "dev",
+                                "ExpirationDate": "2020-06-14T17:02:20Z",
+                                "Name": "dev-capita-queryportalapp",
+                                "Product": "ph2s1",
+                                "Owner": "hcap.azure.service.user",
+                                "Project": "capita"
+        }
+      },
+      "testAzureAppService4": {
+        "name": "dev-capita-persistmetadatajob",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-win-rg",
+        "app_service_plan_id ": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capita-win-rg/providers/Microsoft.Web/serverfarms/dev-capita-win-plan",
+        "client_affinity_enabled": true,
+        "client_cert_enabled ": false,
+        "enabled": true,
+        "https_only": false,
+        "identity": {
+          "type": "SystemAssigned",
+          "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc",
+          "principal_id": "c878be27-7e63-44cf-8a1d-5b001a839d01"
+        },
+        "auth_settings": {
+          "enabled": false,
+          "runtime_version": null,
+          "unauthenticated_client_action": null,
+          "token_store_enabled": null,
+          "issuer": null
+        },
+        "tags": {
+                                "environment": "lab"
+        }
+      },
+      "testAzureAppService5": {
+        "name": "dev-capita-purgejob",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-win-rg",
+        "app_service_plan_id ": "/subscriptions/2a3390b4-6a54-48b5-812a-35320c2fab9c/resourceGroups/dev-capita-win-rg/providers/Microsoft.Web/serverfarms/dev-capita-win-plan",
+        "client_affinity_enabled": true,
+        "client_cert_enabled ": false,
+        "enabled": true,
+        "https_only": true,
+        "identity": {
+          "type": "SystemAssigned",
+          "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc",
+          "principal_id": "1817a4ff-7dba-4563-a0dc-354f3881bd73"
+        },
+        "auth_settings": {
+          "enabled": false,
+          "runtime_version": null,
+          "unauthenticated_client_action": null,
+          "token_store_enabled": null,
+          "issuer": null
+        },
+        "tags": {
+                                "environment": "lab"
+        }
+      }
+    },
+               "azurerm_storage_account": {
+        "testStorageAccount": {
+          "name": "devcapitaevidentialst",
+          "location": "UK South",
+          "resource_group_name": "dev-capita-rg",
+          "tags": {
+            "CreatedBy": "HCAP Deploy",
+            "Environment": "dev",
+            "ExpirationDate": "2020-06-14T17:01:16Z",
+            "Name": "dev-capita-evidentialst",
+            "Owner": "hcap.azure.service.user",
+                                             "Product": "ph2s1",
+                                             "Project": "capita"
+          },
+          "account_kind": "StorageV2",
+          "primary_blob_endpoint": "https://devcapitaevidentialst.blob.core.windows.net/",
+          "primary_queue_endpoint": "https://devcapitaevidentialst.queue.core.windows.net/",
+          "primary_table_endpoint": "https://devcapitaevidentialst.table.core.windows.net/",
+          "primary_file_endpoint": "https://devcapitaevidentialst.file.core.windows.net/",
+          "primary_location": "uksouth",
+          "enable_blob_encryption": true,
+          "enable_file_encryption": true,
+          "enable_https_traffic_only": true,
+                                "account_replication_type": "GRS",
+                                "access_tier": "Hot",
+          "is_hns_enabled": false,
+          "account_tier": "Standard"
+        }
+    },
+    "azurerm_app_service_plan": {
+      "testAzureAppServicePlan": {
+        "name": "dev-capita-portalplan",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-rg",
+        "kind": "linux",
+        "maximum_elastic_worker_count": 10,
+        "sku": {
+          "tier": "Standard",
+          "size": "S1",
+          "capacity": 1
+        },
+        "reserved": true,
+        "per_site_scaling": true,
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+          "Environment": "dev",
+          "Project": "capita",
+          "Owner": "hcap.azure.service.user",
+                                "ExpirationDate": "2020-06-14T17:01:16Z",
+                                "Product": "ph2s1"
+        }
+      },
+                 "testAzureAppServicePlan2": {
+        "name": "dev-capita-evidentialplan",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-rg",
+        "kind": "linux",
+        "maximum_elastic_worker_count": 10,
+        "sku": {
+          "tier": "Standard",
+          "size": "S3",
+          "capacity": 4
+        },
+        "reserved": true,
+        "per_site_scaling": true,
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+          "Environment": "dev",
+          "Project": "capita",
+          "Owner": "hcap.azure.service.user",
+                                "ExpirationDate": "2020-06-14T17:01:16Z",
+                                "Product": "ph2s1"
+        }
+      },
+                 "testAzureAppServicePlan3": {
+        "name": "dev-capita-win-plan",
+        "location": "UK South",
+        "resource_group_name ": "dev-capita-win-rg",
+        "kind": "app",
+        "maximum_elastic_worker_count": 10,
+        "sku": {
+          "tier": "Standard",
+          "size": "S1",
+          "capacity": 1
+        },
+        "reserved": false,
+        "per_site_scaling": false,
+        "tags": {
+          "CreatedBy": "deepak Kollangode Seshamani",
+                                "Name": "dev-capita-win-plan",
+          "Environment": "Dev",
+          "Project": "capita",
+          "Owner": "hcap.azure.service.user",
+                                "ExpirationDate": "05/30/2020 15:39:56",
+                                "Product": "ph2s1"
+        }
+      }
+    },
+    "azurerm_redis_cache": {
+      "testAzureRedisCache": {
+        "name": "dev-capita-rediscache",
+        "location": "UK South",
+        "resource_group_name": "dev-capita-rg",
+        "capacity": 2,
+        "family": "C",
+        "sku_name": "Basic",
+        "enable_non_ssl_port": false,
+        "private_static_ip_address": null,
+        "redis_configuration": {
+                                "maxmemory-policy": "volatile-lru",
+                                "maxclients": "2000",
+          "maxmemory-reserved": "100",
+          "maxfragmentationmemory-reserved": "125",
+                                "maxmemory-delta": "100"
+        },
+        "shard_count": null,
+        "subnet_id": null,
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+          "Environment": "dev",
+          "Name": "dev-capita-rediscache",
+          "ExpirationDate": "2020-06-14T17:01:16Z",
+          "Product": "ph2s1",
+          "Project": "capita"
+        }
+      }
+    },
+    "azurerm_application_insights": {
+      "testInsight": {
+        "name": "dev-capita-appinsights",
+        "resource_group_name": "dev-capita-rg",
+        "location": "uksouth",
+        "application_type": "web",
+        "app_id": "89c33351-ed6c-49af-ade9-cf224d403757",
+        "instrumentation_key": "6624271d-1935-4609-9534-9e073d071213",
+        "sampling_percentage": null,
+        "tags": {
+          "CreatedBy": "HCAP Deploy",
+          "Environment": "dev",
+          "Name": "dev-capita-applicationinsights",
+          "ExpirationDate": "06/14/2020 17:01:16",
+          "Owner": "hcap.azure.service.user",
+          "Product": "ph2s1",
+          "Project": "capita"
+        }
+      }
+    },
+    "azurerm_cosmosdb_account": {
+      "testAzureCosmosdb_account": {
+        "name": "dev-capita-evidentialcosmos",
+        "resource_group_name": "dev-capita-rg",
+        "location": "UK South",
+        "offer_type": "Standard",
+        "kind": "GlobalDocumentDB",
+        "consistency_policy": {
+          "consistency_level": "Strong",
+          "max_interval_in_seconds": 5,
+          "max_staleness_prefix": 100
+        },
+        "geo_location": [
+          {
+            "failover_priority": 0,
+            "prefix": "dev-capita-65232-evidential",
+            "location": "UK South"
+          },
+          {
+            "failover_priority": 1,
+            "prefix": "dev-capita-evidentialcosmos-ukwest",
+            "location": "UK West"
+          }
+        ],
+        "ip_range_filter": "",
+        "enable_automatic_failover": true,
+        "capabilities": [],
+        "is_virtual_network_filter_enabled": false,
+        "enable_multiple_write_locations": false,
+        "tags": {
+          "environment": "lab"
+        }
+      },
+                 "testAzureCosmosdb_account2": {
+        "name": "dev-capita-configstore",
+        "resource_group_name": "dev-capita-rg",
+        "location": "UK South",
+        "offer_type": "Standard",
+        "kind": "GlobalDocumentDB",
+        "consistency_policy": {
+          "consistency_level": "Strong",
+          "max_interval_in_seconds": 5,
+          "max_staleness_prefix": 100
+        },
+        "geo_location": [
+          {
+            "failover_priority": 0,
+            "prefix": "dev-capita-65232-configstore",
+            "location": "UK South"
+          },
+          {
+            "failover_priority": 1,
+            "prefix": "dev-capita-configstore-ukwest",
+            "location": "UK West"
+          }
+        ],
+        "ip_range_filter": "",
+        "enable_automatic_failover": true,
+        "capabilities": [],
+        "is_virtual_network_filter_enabled": false,
+        "enable_multiple_write_locations": false,
+        "tags": {
+          "environment": "lab"
+        }
+      }
+    },
+               "azurerm_key_vault": {
+      "testAzureKeyVault": {
+        "name": "dev-capita-vault",
+        "location": "UK South",
+        "resource_group_name": "dev-capita-rg",
+        "enabled_for_deployment": false,
+        "enabled_for_disk_encryption": null,
+        "enabled_for_template_deployment": null,
+        "sku_name": "standard",
+        "tenant_id": "100cb864-5a3f-49a2-99d0-c0ec602bc4bc",
+                              "tags": {
+          "CreatedBy": "HCAP Deploy",
+                                "Environment": "dev",
+                                "ExpirationDate": "2020-06-14T17:02:34Z",
+                                "Name": "dev-capita-vault",
+                                "Product": "ph2s1",
+                                "Owner": "hcap.azure.service.user",
+                                "Project": "capita"
+        }
+      }
+    }
+  }
