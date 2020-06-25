@@ -1,0 +1,31 @@
+{
+    "azurerm_app_service": {
+      "testAzureAppService": "dev-capita-evidentialapp",
+  "testAzureAppService1": "dev-capita-evidentialmetadatafunc",
+  "testAzureAppService2": "dev-capita-portalapiapp",
+  "testAzureAppService3": "dev-capita-queryportalapp",
+      "testAzureAppService4": "dev-capita-persistmetadatajob",
+      "testAzureAppService5": "dev-capita-purgejob"
+    },
+"azurerm_storage_account": {
+        "testStorageAccount": "devcapitaevidentialst"
+    },
+    "azurerm_app_service_plan": {
+      "testAzureAppServicePlan": "dev-capita-portalplan",
+  "testAzureAppServicePlan2": "dev-capita-evidentialplan",
+  "testAzureAppServicePlan3": "dev-capita-win-plan"
+    },
+    "azurerm_redis_cache": {
+      "testAzureRedisCache": "dev-capita-rediscache"
+    },
+    "azurerm_application_insights": {
+      "testInsight": "dev-capita-appinsights"
+    },
+    "azurerm_cosmosdb_account": {
+      "testAzureCosmosdb_account": "dev-capita-evidentialcosmos",
+  "testAzureCosmosdb_account2": "dev-capita-configstore"
+    },
+"azurerm_key_vault": {
+      "testAzureKeyVault": "dev-capita-vault"
+    }
+  }
