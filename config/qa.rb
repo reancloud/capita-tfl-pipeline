@@ -190,7 +190,7 @@ set :functional_tests, [
   }
 ]
 
-set :infra_test_tool, :none
+set :infra_test_tool, :reantest
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
