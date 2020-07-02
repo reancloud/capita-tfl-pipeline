@@ -24,8 +24,29 @@ set :capitacommon_vars do
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
-    location: "ukwest",
-    access_tier: "Standard"
+    "cosmos": {
+  "evidential": {
+    name: "docstore",
+    offer_type: "Standard",
+    kind: "GlobalDocumentDB",
+    automatic_failover: true,
+    failover_location: "ukwest",
+    consistency_level: "ConsistentPrefix",
+    "ip_range_filter": ""
+  }
+},
+"configcosmos": {
+   "evidential": {
+     "name": "configstore",
+     offer_type: "Standard",
+     kind: "GlobalDocumentDB",
+     automatic_failover: true,
+     failover_location: "ukwest",
+     consistency_level: "Strong",
+     "ip_range_filter": ""
+   }
+ }
+
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
     #                such as:  how many days before my deployed infrastructure expires?
@@ -44,7 +65,25 @@ set :capitaapi_vars do
     environment: fetch(:pipeline_env),
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
-    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d')
+    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
+    "owner": "hcap.azure.service.user",
+    "product": "hcap",
+    "clientName": "capita",
+    "adapp": "evidential",
+    "key": "evidential",
+    "app_environmentid": "",
+    "container_name": "evidential2",
+    "access_tier": "Standard",
+    "replication": "GRS",
+    "tier": "Standard",
+    "size": "S1",
+    "queuename": "evidentialqueue",
+    "cosmoskey": "evidential1",
+    "failover_location": "ukwest",
+    "offertype": "Standard",
+    "consistency_level": "Strong",
+    "integer": "1200",
+    "location": "uksouth"
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
     #                such as:  how many days before my deployed infrastructure expires?
@@ -63,9 +102,9 @@ set :capitapurge_vars do
     environment: fetch(:pipeline_env),
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
-    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d')
-
-
+    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
+    location: "uksouth",
+    access_tier: "Standard"
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
     #                such as:  how many days before my deployed infrastructure expires?
@@ -84,11 +123,15 @@ set :capitaad_vars do
     environment: fetch(:pipeline_env),
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
-    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d')
+    expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
+    location: "uksouth",
+    access_tier: "Standard",
+
+}
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
     #                such as:  how many days before my deployed infrastructure expires?
-  }
+
 end
 # Declare the HCAP Deploy deployment name for the application sub-project named :myapp
 set :capitacommon_dep_name, 'development'
@@ -105,21 +148,22 @@ set :capitaad_dep_name, 'development'
 set :capitacommon_deploy_config do
   {
     deployment_name: fetch(:capitacommon_dep_name),
-    deployment_description: 'capitacommon - Development'
+    deployment_description: 'capitacommon - development',
+    input_json_file: fetch(:capitacommon_inputs_file),
   }
 end
 
 set :capitaapi_deploy_config do
   {
     deployment_name: fetch(:capitaapi_dep_name),
-    deployment_description: 'capitaapi - Development'
+    deployment_description: 'capitaapi - development'
   }
 end
 
 set :capitapurge_deploy_config do
   {
     deployment_name: fetch(:capitapurge_dep_name),
-    deployment_description: 'capitapurge - Development'
+    deployment_description: 'capitapurge - development'
   }
 end
 
@@ -127,7 +171,7 @@ end
 set :capitaad_deploy_config do
   {
     deployment_name: fetch(:capitaad_dep_name),
-    deployment_description: 'capitaad - Development'
+    deployment_description: 'capitaad - development'
   }
 end
 
@@ -143,6 +187,8 @@ set :functional_tests, [
     chrome: 72
   }
 ]
+
+set :infra_test_tool, :none
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
