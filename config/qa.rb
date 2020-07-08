@@ -72,7 +72,7 @@ set :capitaapi_vars do
     "adapp": "evidential",
     "key": "evidential",
     "app_environmentid": "",
-    "container_name": "evidential2",
+    "container_name": "evidential",
     "access_tier": "Standard",
     "replication": "GRS",
     "tier": "Standard",
@@ -190,7 +190,7 @@ set :functional_tests, [
   }
 ]
 
-set :infra_test_tool, :reantest
+set :infra_test_tool, :none
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
