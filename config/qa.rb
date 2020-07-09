@@ -103,7 +103,7 @@ set :capitapurge_vars do
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
-    location: "ukwest",
+    location: "uksouth",
     access_tier: "Standard"
     #                ^^^
     #                You can write expressions in ruby to dynamically calculate layer inputs,
