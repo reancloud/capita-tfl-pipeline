@@ -24,18 +24,38 @@ set :capitacommon_vars do
     project: fetch(:application),
     prefix: "#{fetch(:pipeline_env)}-#{fetch(:application)}",
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
+    "adapp": "evidential",
+    "container_name": "evidential",
+    "accesstier": "Hot",
+    "account_tier": "Standard",
+    "replication": "GRS",
+    "tier": "Standard",
+    "eventhubsku": "Standard",
+    "integer": "1200",
+    "password": "test124",
+    "randominteger": "19999",
+    "randominteger2": "2300",
+    "location": "uksouth",
+    "eventhubretentiondays": "2",
+    "eventhubpartition": "2",
+    "sqlusername": "4dm1n",
+    "sqlpassword": "capita@2020",
+    "sqlserverversion": "12.0",
+    "logretentiondays": 30,
     "cosmos": {
-  "evidential": {
-    name: "docstore",
-    offer_type: "Standard",
-    kind: "GlobalDocumentDB",
-    automatic_failover: true,
-    failover_location: "ukwest",
-    consistency_level: "ConsistentPrefix",
-    "ip_range_filter": ""
+    "evidential": {
+      "name": "evidential",
+      "offer_type": "Standard",
+      "kind": "GlobalDocumentDB",
+      "automatic_failover": true,
+      "failover_location": "ukwest",
+      "consistency_level": "ConsistentPrefix",
+      "throughput": 400,
+      "ip_range_filter": ""
+    }
   }
-},
-"configcosmos": {
+
+  "configcosmos": {
    "evidential": {
      "name": "configstore",
      offer_type: "Standard",
@@ -126,6 +146,9 @@ set :capitaad_vars do
     expiration_date: (Time.now + 86_400 * 7).strftime('%Y-%m-%d'),
     location: "uksouth",
     access_tier: "Standard",
+    "adminuser": "ritika.joshi@reancloud.onmicrosoft.com",
+    "evi_password": "xsdcdee",
+    "portal_password": "edadfxa"
 
 }
     #                ^^^
