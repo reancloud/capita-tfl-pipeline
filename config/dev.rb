@@ -53,7 +53,7 @@ set :capitacommon_vars do
       "throughput": 400,
       "ip_range_filter": ""
     }
-  }
+  },
 
   "configcosmos": {
    "evidential": {
