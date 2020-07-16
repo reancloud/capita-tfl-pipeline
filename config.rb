@@ -35,14 +35,17 @@ set :app_deploy_tool, :reandeploy
 #  - HCAP DevSecOps is able to derive many other default settings from a sub-project name.
 #  - When you select Terraform as your deployment tool, the default sub-project directory
 #    will be `terraform/MY-SUBPROJECT-NAME`.
-set :app_envs, [
-                :capitaad,
-                :capitacommon,
-                :capitaapi,
-                :capitapurge
+set :app_envs,[
+  :env!('HCAP_ENV')
+]
+#set :app_envs, [
+#                :capitaad,
+#                :capitacommon,
+#                :capitaapi,
+#                :capitapurge
 
 
-              ]
+#              ]
 # Declare HCAP Deploy input parameters for the application sub-project named "myapp"
 #  - HCAP DevSecOps allows you to dynamically define input parameters to be passed to
 #    HCAP Deploy at deployment time.  This example reads them from a file.
