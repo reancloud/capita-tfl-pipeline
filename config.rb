@@ -36,7 +36,7 @@ set :app_deploy_tool, :reandeploy
 #  - When you select Terraform as your deployment tool, the default sub-project directory
 #    will be `terraform/MY-SUBPROJECT-NAME`.
 set :app_envs,[
-  :ENV['HCAP_ENV']
+  env!('HCAP_ENV')
 ]
 #set :app_envs, [
 #                :capitaad,
