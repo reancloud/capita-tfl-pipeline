@@ -40,7 +40,8 @@ if env!('HCAP_ENV')== "all"
                    :capitaad,
                     :capitacommon,
                     :capitaapi,
-                    :capitapurge
+                    :capitapurge,
+                    :capitawebportal
   ]
 else
   set :app_envs,[
@@ -82,6 +83,7 @@ set :capitaad_reandeploy_id, 880
 set :capitacommon_reandeploy_id, 923
 set :capitaapi_reandeploy_id, 924
 set :capitapurge_reandeploy_id, 918
+set :capitawebportal_reandeploy_id, 868
 
 ##############################################################################################
 # INFRASTRUCTURE VALIDATION
