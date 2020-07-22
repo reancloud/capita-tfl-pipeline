@@ -38,7 +38,7 @@ set :capitacommon_vars do
     "location": "uksouth",
     "eventhubretentiondays": "2",
     "eventhubpartition": "2",
-    "sqlusername": "4dm1n",
+    "sqlusername": env!('SQL_USERNAME'),
     "sqlpassword": "capita@2020",
     "sqlserverversion": "12.0",
     "logretentiondays": 30,
